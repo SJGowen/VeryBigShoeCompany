@@ -19,7 +19,10 @@ static class Program
         {
             string errors = validator.Validate(order);
             if (errors != "")
+            {
+                Console.WriteLine($"Order {order.CustomerName} ({order.CustomerEmail}) contains the following errors:");
                 Console.WriteLine(errors);
+            }
         }
 
         string jsonText = JsonConvert.SerializeObject(orders);

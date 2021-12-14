@@ -2,13 +2,11 @@
 
 public class DateUtilities
 {
-    private DateTime CurrentDate = new();
-
+    private readonly DateTime CurrentDate;
     public DateUtilities()
     {
-        CurrentDate = DateTime.Now;
+        CurrentDate = DateTime.Today;
     }
-
     public DateUtilities(DateTime dateTime)
     {
         CurrentDate = dateTime;

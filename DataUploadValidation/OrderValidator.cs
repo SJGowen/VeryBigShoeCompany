@@ -15,7 +15,7 @@ internal class OrderValidator
         if (!RegexUtilities.IsValidEmail(t.CustomerEmail))
             errors.AppendLine($"Customer Email \"{t.CustomerEmail}\", must be a valid email address!");
 
-        DateUtilities dateUtilities = new(); // use new(new DateTime(2021, 4, 19)); or earlier to pass test data
+        DateUtilities dateUtilities = new();
         if (!dateUtilities.IsWorkingDaysInFutureValid(t.DateRequired, 10))
             errors.AppendLine($"Date \"{t.DateRequired.ToString("dd/MM/yyyy")}\", must be valid and at least 10 working days into the future!");
 
